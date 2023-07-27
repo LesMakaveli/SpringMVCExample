@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Создать заметку</title>
+</head>
+<body>
+<h1>Создать заметку</h1>
+<form th:action="@{/note/create}" th:object="${note}" method="post">
+    <label for="title">Заголовок:</label>
+    <input type="text" id="title" name="title" required><br>
+    <label for="content">Содержание:</label><br>
+    <textarea id="content" name="content" rows="5" required></textarea><br>
+    <input type="submit" value="Создать">
+</form>
+</body>
+</html>

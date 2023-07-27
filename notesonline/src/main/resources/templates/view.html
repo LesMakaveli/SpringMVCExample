@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${note.title}">Просмотр заметки</title>
+</head>
+<body>
+<h1 th:text="${note.title}">Заголовок заметки</h1>
+<p th:text="${note.content}">Содержание заметки</p>
+<a th:href="@{/}">Вернуться к списку заметок</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Заметки онлайн</title>
+</head>
+<body>
+<h1>Заметки онлайн</h1>
+<a href="/note/create">Создать новую заметку</a>
+<ul>
+    <li th:each="note : ${notes}">
+        <a th:href="@{/note/{id}(id=${note.id})}" th:text="${note.title}"></a>
+    </li>
+</ul>
+</body>
+</html>
